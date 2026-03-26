@@ -21,14 +21,18 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 
 ## セットアップ手順
 
-### Step 1: リポジトリのクローン
+### Step 1: ダウンロード
 
-```bash
-git clone https://github.com/FujiLab-2026/genomics-mcp.git
-cd genomics-mcp
-```
+1. 以下のリンクを開く:
+   **https://github.com/FujiLab-2026/genomics-mcp**
+2. 緑色の **「Code」** ボタンをクリック
+3. **「Download ZIP」** をクリック
+4. ダウンロードされた `genomics-mcp-main.zip` を展開（右クリック →「すべて展開」）
+5. 展開されたフォルダを好きな場所に移動（例: `C:\Users\自分のユーザー名\genomics-mcp`）
 
-### Step 2: APIキーの取得
+> **Gitが使える方**: `git clone https://github.com/FujiLab-2026/genomics-mcp.git` でもOKです
+
+### Step 2: APIキーの取得（任意）
 
 #### NCBI API Key（推奨・無くても動作します）
 
@@ -47,18 +51,24 @@ cd genomics-mcp
 
 ### Step 3: セットアップ実行
 
-```bash
+1. 展開したフォルダを開く
+2. フォルダのアドレスバーをクリックして `cmd` と入力し、Enterキーを押す（コマンドプロンプトが開きます）
+3. 以下を入力してEnter:
+
+```
 python setup_config.py
 ```
 
-これだけで以下が自動実行されます:
+画面の案内に従って操作してください。以下が自動で行われます:
 - uv（Pythonパッケージマネージャ）のインストール（未導入の場合）
-- APIキーの対話的設定
+- APIキーの対話的設定（Step 2でメモしたキーを貼り付け。無ければEnterでスキップ）
 - Claude Desktopの設定ファイルへの自動登録
+
+> **macOSの方**: Finderでフォルダを右クリック →「フォルダでターミナルを開く」→ `python3 setup_config.py`
 
 ### Step 4: Claude Desktop を再起動
 
-設定が反映されます。
+設定が反映されます。タスクバーのClaude Desktopアイコンを右クリック →「終了」してから再度開いてください。
 
 ## 手動設定（setup_config.py を使わない場合）
 
