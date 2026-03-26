@@ -119,11 +119,21 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 
 ### Node.js のインストール手順
 
-1. https://nodejs.org/en/download を開く
-2. **「Windows Installer (.msi)」** の **64-bit** をクリックしてダウンロード
-3. ダウンロードされた `.msi` ファイルをダブルクリックして実行
-4. インストーラーの画面は全て **「Next」→「Next」→「Install」** でOK
-5. Claude Desktopを再起動
+https://nodejs.org/en/download を開き、お使いのOSに合ったインストーラーをダウンロードしてください。
+
+#### Windows
+
+1. **「Windows Installer (.msi)」** の **64-bit** をクリックしてダウンロード
+2. ダウンロードされた `.msi` ファイルをダブルクリックして実行
+3. インストーラーの画面は全て **「Next」→「Next」→「Install」** でOK
+
+#### macOS
+
+1. **「macOS Installer (.pkg)」** をクリックしてダウンロード
+2. ダウンロードされた `.pkg` ファイルをダブルクリックして実行
+3. インストーラーの画面は全て **「続ける」→「インストール」** でOK
+
+インストール後、Claude Desktopを再起動してください。
 
 Claudeに「Documentsフォルダの中身を見せて」と話しかけて動作確認してください。
 
