@@ -84,6 +84,8 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 - APIキーの対話的設定（Step 2でメモしたキーを貼り付け。無ければEnterでスキップ）
 - Claude Desktopの設定ファイルに全サーバーを自動登録（手でJSONを編集する必要はありません）
 
+> Filesystem MCPサーバーが既に設定済みでも問題ありません。既存の設定を保持したまま追加されます。
+
 ### Step 4: Claude Desktop を再起動
 
 - **Windows**: タスクバー右下のClaude Desktopアイコンを右クリック →「終了」してから再度開く
