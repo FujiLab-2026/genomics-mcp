@@ -102,9 +102,11 @@ Claudeに自分のPC上のファイル（PDF・Excel・テキストなど）を�
 
 ### Step A: Node.js をインストール
 
-1. https://nodejs.org/ を開く
-2. **LTS（推奨版）** をダウンロードしてインストール（全てデフォルト設定でOK）
-3. インストール後、PCを再起動
+1. 以下のページを開く: https://nodejs.org/en/download
+2. **「Windows Installer (.msi)」** の **64-bit** をクリックしてダウンロード
+3. ダウンロードされた `.msi` ファイルをダブルクリックして実行
+4. インストーラーの画面は全て **「Next」→「Next」→「Install」** でOK（設定変更不要）
+5. 完了したらPCを再起動
 
 ### Step B: 設定ファイルを編集
 
