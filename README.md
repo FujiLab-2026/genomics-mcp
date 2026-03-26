@@ -23,14 +23,10 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 
 ### Step 1: ダウンロード
 
-1. 以下のリンクを開く:
-   **https://github.com/FujiLab-2026/genomics-mcp**
-2. 緑色の **「Code」** ボタンをクリック
-3. **「Download ZIP」** をクリック
-4. ダウンロードされた `genomics-mcp-main.zip` を展開（右クリック →「すべて展開」）
-5. 展開されたフォルダを好きな場所に移動（例: `C:\Users\自分のユーザー名\genomics-mcp`）
-
-> **Gitが使える方**: `git clone https://github.com/FujiLab-2026/genomics-mcp.git` でもOKです
+1. 以下のリンクをクリックしてZIPファイルをダウンロード:
+   **https://github.com/FujiLab-2026/genomics-mcp/archive/refs/heads/main.zip**
+2. ダウンロードされた `genomics-mcp-main.zip` を右クリック →「すべて展開」
+3. 展開されたフォルダを好きな場所に移動（例: `C:\Users\自分のユーザー名\genomics-mcp-main`）
 
 ### Step 2: APIキーの取得（任意）
 
