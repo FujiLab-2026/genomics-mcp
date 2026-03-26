@@ -53,6 +53,14 @@
         "--directory", "{{INSTALL_DIR}}",
         "python", "servers/clinicaltrials/clinicaltrials_server.py"
       ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{{HOME_DIR}}/Documents"
+      ]
     }
   }
 }

@@ -96,81 +96,24 @@ python setup_config.py
 - **サーバーが表示されない**: Claude Desktopを再起動したか確認
 - **初回起動が遅い**: uv が依存パッケージを初回ダウンロード中（2回目以降はキャッシュされる）
 
-## オプション：Filesystem MCPサーバー
+## オプション：Filesystemサーバー（ローカルファイルの読み書き）
 
-Claudeに自分のPC上のファイル（PDF・Excel・テキストなど）を直接読み書きさせたい場合、Anthropic公式のFilesystemサーバーを追加できます。genomics-mcpとは独立した機能なので、不要ならスキップしてOKです。
+セットアップスクリプトを実行すると、Filesystemサーバーの設定も自動で登録されます。
+このサーバーを使うと、Claudeが自分のPC上のファイル（PDF・Excel・テキストなど）を直接読み書きできるようになります。
 
-### Step A: Node.js をインストール
+**使うには Node.js のインストールが必要です**（Node.jsが無くても他の6サーバーは正常に動きます）。
 
-1. 以下のページを開く: https://nodejs.org/en/download
+### Node.js のインストール手順
+
+1. https://nodejs.org/en/download を開く
 2. **「Windows Installer (.msi)」** の **64-bit** をクリックしてダウンロード
 3. ダウンロードされた `.msi` ファイルをダブルクリックして実行
-4. インストーラーの画面は全て **「Next」→「Next」→「Install」** でOK（設定変更不要）
-5. 完了したらPCを再起動
+4. インストーラーの画面は全て **「Next」→「Next」→「Install」** でOK
+5. Claude Desktopを再起動
 
-### Step B: 設定ファイルを編集
+Claudeに「Documentsフォルダの中身を見せて」と話しかけて動作確認してください。
 
-1. 以下の場所にあるファイルをメモ帳で開く:
-   - **Windows**: `C:\Users\自分のユーザー名\AppData\Roaming\Claude\claude_desktop_config.json`
-
-   > `AppData` フォルダが見えない場合: エクスプローラーのアドレスバーに `%APPDATA%\Claude` と入力してEnter
-
-   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-
-2. ファイルを開くと以下のような内容があります（setup_config.py で生成済み）:
-
-   ```json
-   {
-     "mcpServers": {
-       "pubmed": { ... },
-       "clinvar": { ... },
-       ...
-     }
-   }
-   ```
-
-3. `"mcpServers"` の中に、以下の `"filesystem"` ブロックを**追加**してください（カンマを忘れずに）:
-
-   ```json
-   {
-     "mcpServers": {
-       "pubmed": { ... },
-       "clinvar": { ... },
-       ...
-       "clinicaltrials": { ... },
-       "filesystem": {
-         "command": "npx",
-         "args": [
-           "-y",
-           "@modelcontextprotocol/server-filesystem",
-           "C:\\Users\\自分のユーザー名\\Documents"
-         ]
-       }
-     }
-   }
-   ```
-
-4. `自分のユーザー名` を実際のWindowsユーザー名に書き換える
-   - 確認方法: エクスプローラーで `C:\Users` を開いて自分のフォルダ名を確認
-   - macOSの場合: `"/Users/自分のユーザー名/Documents"` のようにスラッシュで記述
-
-5. Claudeにアクセスさせたいフォルダがあれば追加できます（カンマ区切り）:
-
-   ```json
-   "args": [
-     "-y",
-     "@modelcontextprotocol/server-filesystem",
-     "C:\\Users\\自分のユーザー名\\Documents",
-     "C:\\Users\\自分のユーザー名\\OneDrive",
-     "C:\\Users\\自分のユーザー名\\Desktop"
-   ]
-   ```
-
-6. ファイルを保存して閉じる
-
-### Step C: Claude Desktop を再起動
-
-設定が反映されます。Claudeに「Documentsフォルダの中身を見せて」などと話しかけて動作確認してください。
+> デフォルトではDocumentsフォルダにアクセスできます。他のフォルダも追加したい場合は藤井に相談してください。
 
 ## ライセンス
 

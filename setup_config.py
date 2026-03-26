@@ -198,7 +198,9 @@ def generate_config(script_dir: Path, env_values: dict):
 
     # プレースホルダーを置換
     install_dir = str(script_dir).replace("\\", "\\\\")
+    home_dir = str(Path.home()).replace("\\", "\\\\")
     template = template.replace("{{INSTALL_DIR}}", install_dir)
+    template = template.replace("{{HOME_DIR}}", home_dir)
     template = template.replace("{{NCBI_API_KEY}}", env_values.get("NCBI_API_KEY", ""))
     template = template.replace("{{ONCOKB_TOKEN}}", env_values.get("ONCOKB_TOKEN", ""))
 
@@ -272,6 +274,15 @@ def main():
     print("=" * 60)
     print(f"\n  設定ファイル: {config_path}")
     print(f"  登録されたサーバー: {', '.join(servers)}")
+
+    # filesystem サーバーの案内
+    npx_path = shutil.which("npx")
+    if npx_path:
+        print(f"\n  ✅ Filesystemサーバーも登録済み（Node.js検出済み）")
+        print(f"     Claudeがローカルファイルを読み書きできます")
+    else:
+        print(f"\n  💡 Filesystemサーバー: Node.jsをインストールすると使えるようになります")
+        print(f"     （Node.js無しでも他の6サーバーは正常に動作します）")
 
     if not env_values.get("ONCOKB_TOKEN"):
         print("\n  ⚠ OncoKBサーバーはTokenを設定するまで動作しません。")
