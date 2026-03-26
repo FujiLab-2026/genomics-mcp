@@ -21,9 +21,12 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 
 ## 前提条件
 
-- Claude Desktop がインストール済み
-- 何らかのPython（`setup_config.py` の実行に必要。Anaconda、システムPython、python.org版いずれでもOK。バージョンは3.8以上なら動作する。uv やサーバー自体の実行にはPythonの事前インストールは不要）
-- インターネット接続（uv の自動インストールとAPIアクセスに必要）
+- **Claude Desktop** がインストール済み
+- **Python 3**（バージョン 3.10 以上）
+  既にインストール済みの場合（Anaconda等）はそのまま使えます。入っていない場合は:
+  - Windows: https://www.python.org/downloads/ → インストール時に **「Add python.exe to PATH」に必ずチェック**
+  - macOS: https://www.python.org/downloads/ → .pkg をダウンロードして実行
+- **インターネット接続**（uv の自動インストールとAPIアクセスに必要）
 
 ## セットアップ手順
 
