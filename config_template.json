@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "pubmed": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/pubmed/pubmed_server.py"
+      ],
+      "env": {
+        "NCBI_API_KEY": "{{NCBI_API_KEY}}"
+      }
+    },
+    "clinvar": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/clinvar/clinvar_server.py"
+      ]
+    },
+    "civic": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/civic/civic_server.py"
+      ]
+    },
+    "oncokb": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/oncokb/oncokb_server.py"
+      ],
+      "env": {
+        "ONCOKB_TOKEN": "{{ONCOKB_TOKEN}}"
+      }
+    },
+    "semantic_scholar": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/semantic_scholar/semantic_scholar_server.py"
+      ]
+    },
+    "clinicaltrials": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory", "{{INSTALL_DIR}}",
+        "python", "servers/clinicaltrials/clinicaltrials_server.py"
+      ]
+    }
+  }
+}
