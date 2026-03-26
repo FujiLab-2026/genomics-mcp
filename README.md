@@ -19,6 +19,12 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 | **Semantic Scholar** | 学術論文検索、引用/被引用ネットワーク解析、著者検索、推薦論文取得 |
 | **ClinicalTrials** | 臨床試験検索（疾患/介入/ステータス別）、適格基準取得、日本国内治験施設フィルタ |
 
+## 前提条件
+
+- Claude Desktop がインストール済み
+- 何らかのPython（`setup_config.py` の実行に必要。Anaconda、システムPython、python.org版いずれでもOK。バージョンは3.8以上なら動作する。uv やサーバー自体の実行にはPythonの事前インストールは不要）
+- インターネット接続（uv の自動インストールとAPIアクセスに必要）
+
 ## セットアップ手順
 
 ### Step 1: ダウンロード
@@ -88,20 +94,6 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 2. `.env.example` を `.env` にコピーしてAPIキーを記入
 3. `config_template.json` の `{{INSTALL_DIR}}` を実際のパスに書き換え
 4. `claude_desktop_config.json` に内容をコピー（既存設定とマージ）
-
-## 前提条件
-
-- Claude Desktop がインストール済み
-- 何らかのPython（`setup_config.py` の実行に必要。Anaconda、システムPython、python.org版いずれでもOK。バージョンは3.8以上なら動作する。uv やサーバー自体の実行にはPythonの事前インストールは不要）
-- インターネット接続（uv の自動インストールとAPIアクセスに必要）
-
-## 使用例
-
-- PubMed: 「pancreatic cancer AND body composition で検索して」
-- ClinVar: 「KRAS G12Dの臨床的意義を教えて」
-- OncoKB: 「BRAF V600Eのアクショナビリティを調べて」
-- CIViC: 「EGFRのエビデンスを検索して」
-- ClinicalTrials: 「膵臓癌の第III相試験を検索して」
 
 ## トラブルシューティング
 
