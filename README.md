@@ -60,9 +60,10 @@ python setup_config.py
 画面の案内に従って操作してください。以下が自動で行われます:
 - uv（Pythonパッケージマネージャ）のインストール（未導入の場合）
 - APIキーの対話的設定（Step 2でメモしたキーを貼り付け。無ければEnterでスキップ）
-- Claude Desktopの設定ファイルへの自動登録
+- Claude Desktopの設定ファイルに全サーバーを自動登録（手でJSONを編集する必要はありません）
 
-> **macOSの方**: Finderでフォルダを右クリック →「フォルダでターミナルを開く」→ `python3 setup_config.py`
+> **macOSの方**: コマンドプロンプトの代わりにターミナルを使います。
+> Finderで展開したフォルダを右クリック →「フォルダでターミナルを開く」→ `python3 setup_config.py` と入力してEnter
 
 ### Step 4: Claude Desktop を再起動
 
