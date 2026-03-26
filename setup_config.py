@@ -198,9 +198,9 @@ def generate_config(script_dir: Path, env_values: dict):
 
     # プレースホルダーを置換
     install_dir = str(script_dir).replace("\\", "\\\\")
-    home_dir = str(Path.home()).replace("\\", "\\\\")
+    documents_dir = str(Path.home() / "Documents").replace("\\", "\\\\")
     template = template.replace("{{INSTALL_DIR}}", install_dir)
-    template = template.replace("{{HOME_DIR}}", home_dir)
+    template = template.replace("{{DOCUMENTS_DIR}}", documents_dir)
     template = template.replace("{{NCBI_API_KEY}}", env_values.get("NCBI_API_KEY", ""))
     template = template.replace("{{ONCOKB_TOKEN}}", env_values.get("ONCOKB_TOKEN", ""))
 

@@ -49,25 +49,36 @@ Semantic Scholar, ClinicalTrials.gov のAPIを直接利用できます。
 
 ### Step 3: セットアップ実行
 
-1. 展開したフォルダを開く
-2. フォルダのアドレスバーをクリックして `cmd` と入力し、Enterキーを押す（コマンドプロンプトが開きます）
+展開したフォルダ内でコマンドを実行します。
+
+#### Windows の場合
+
+1. 展開したフォルダをエクスプローラーで開く
+2. アドレスバーをクリックして `cmd` と入力し、Enterキーを押す（コマンドプロンプトが開きます）
 3. 以下を入力してEnter:
+   ```
+   python setup_config.py
+   ```
 
-```
-python setup_config.py
-```
+#### macOS の場合
 
-画面の案内に従って操作してください。以下が自動で行われます:
+1. Finderで展開したフォルダを右クリック →「フォルダでターミナルを開く」
+2. 以下を入力してEnter:
+   ```
+   python3 setup_config.py
+   ```
+
+#### 画面の案内に従って操作
+
+以下が自動で行われます:
 - uv（Pythonパッケージマネージャ）のインストール（未導入の場合）
 - APIキーの対話的設定（Step 2でメモしたキーを貼り付け。無ければEnterでスキップ）
 - Claude Desktopの設定ファイルに全サーバーを自動登録（手でJSONを編集する必要はありません）
 
-> **macOSの方**: コマンドプロンプトの代わりにターミナルを使います。
-> Finderで展開したフォルダを右クリック →「フォルダでターミナルを開く」→ `python3 setup_config.py` と入力してEnter
-
 ### Step 4: Claude Desktop を再起動
 
-設定が反映されます。タスクバーのClaude Desktopアイコンを右クリック →「終了」してから再度開いてください。
+- **Windows**: タスクバー右下のClaude Desktopアイコンを右クリック →「終了」してから再度開く
+- **macOS**: メニューバーのClaude →「Quit Claude」してから再度開く
 
 ## 手動設定（setup_config.py を使わない場合）
 

@@ -59,7 +59,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "{{HOME_DIR}}/Documents"
+        "{{DOCUMENTS_DIR}}"
       ]
     }
   }
